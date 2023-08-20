@@ -1,0 +1,89 @@
+article{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+article .text{
+    width: fit-content;
+    padding-left: 10px;
+}
+.container-links{
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+
+.circle-1,
+.circle-2,
+.circle-3{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+.text .title,
+.text .subtitle{
+    padding: 1rem;
+}
+
+.images{
+    width: 800px;
+    height: 500px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.images .container,
+.images .container-hover{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease-out;
+}
+
+
+.images .container{
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+
+
+.images .container-hover{
+    position: absolute;
+    top:0;
+    left: 100%; 
+    overflow: hidden;
+}
+
+.images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.images .image-hover{
+    margin-left: -90%;
+    transition: 0.5s ease-out;
+}
+
+.images:hover .container{
+    flex-grow: 0;
+}
+
+.images:hover .container-hover{
+    position: absolute;
+    top:0;
+    left: 0; 
+    object-position: 0% 0;
+}
+
+.images:hover .container-hover img{
+    margin-left: 0;
+}
