@@ -37,24 +37,38 @@ article .text{
 .text .titleh2,
 .text .line2,
 .text .line3,
+.text .line4,
+.text .line5,
 .text .subtitle{
     padding: 1rem;
     letter-spacing: normal
 }
+.underline{
+    margin-left: 1rem
+}
 .text .titleh2 .letter,
 .text .line3 .letter,
+.text .line4 .letter,
+.text .line5 .word,
 .text .line2 .letter{
     display: inline-block;
     
+}
+.underline{
+    width: 200px;
+    border-top: 1px solid #000;
 }
 
 .text .line3 .letter{
     /* transform: rotateX(70deg) */
 }
 
-.text .line3 {
+.text .line3, 
+.text .line4,
+.text .line5{
     overflow: hidden;
 }
+
 
 .images{
     width: 800px;

@@ -16,9 +16,24 @@ textWrapper3.innerHTML = textWrapper.textContent.replace(
   /\S/g,
   "<span class='letter'>$&</span>"
 );
+
+let textWrapper4 = document.querySelector(".line4");
+textWrapper4.innerHTML = textWrapper.textContent.replace(
+  /\S/g,
+  "<span class='letter'>$&</span>"
+);
 // let titleContent = document.getElementById("title");
 // titleContent.innerHTML =
 //   "<div>" + titleContent.innerHTML.split("").join("</div><div>") + "</div>";
+
+var textWrapper5 = document.querySelector(".line5");
+var words = textWrapper5.textContent.split(/\s+/);
+var wrappedContent = words
+  .map(function (word) {
+    return "<span class='word'>" + word + "</span>";
+  })
+  .join(" ");
+textWrapper5.innerHTML = wrappedContent;
 
 tl.from(".title", {
   duration: 1.5,
@@ -43,6 +58,16 @@ tl.from(".line3 .letter", {
 
   duration: 0.7,
   stagger: 0.05,
+});
+tl.from(".line4 .letter", {
+  translateY: "50px",
+  duration: 0.7,
+  stagger: 0.05,
+});
+tl.from(".line5 .word", {
+  translateY: "50px",
+  duration: 0.7,
+  stagger: 0.2,
 });
 tl.from(
   ".subtitle",
